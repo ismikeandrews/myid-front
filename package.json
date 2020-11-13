@@ -20,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "watch-sass": "sass --watch src/pages/index.scss:src/css/index.css src/shared/index.scss:src/css/shared.css"
+    "watch": "sass --watch src/pages/index.scss:src/css/index.css src/shared/index.scss:src/css/shared.css"
   },
   "eslintConfig": {
     "extends": [
