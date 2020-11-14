@@ -1,3 +1,120 @@
-h1{
-    color: greenyellow;
+body {
+    background: $bg;
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    align-items: center;
+    background-image: linear-gradient(to bottom right, $blue, $bg);
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 120px 0;
+    
+    &__desc {
+        width: 65%;
+    }
+    
+    &__image {
+        width: 35%;
+    }
+
+    &__title {
+        color: $white;
+        font: 30px $font-semibold;
+        margin: 0;
+        text-transform: uppercase;
+    }
+    
+    &__text {
+        color: $white;
+        font: 20px/28px $font-medium;
+        margin: 30px 0 50px;
+        max-width: 500px;
+    }
+    
+    &__buttons {
+        align-items: center;
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    &__button {
+        border: 3px solid $white;
+        background: transparent;
+        border-radius: 10px;
+        color: $white;
+        cursor: pointer;
+        font: 18px $font-bold;
+        margin-right: 30px;
+        padding: 10px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: all .5s ease-in-out;
+        width: 200px;
+
+        &:hover {
+            background: $green;
+            border-color: $green;
+        }
+    }
+
+    &__img {
+        margin-bottom: -5px;
+        width: 400px;
+    }
+
+}
+
+
+.topics {
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+
+    &__title {
+        color: $black;
+        font: 25px $font-bold;
+    }
+    
+    &__text {
+        color: $black;
+        font: 18px $font-medium;
+        margin: 20px 0 50px;
+    }
+
+    &__list {
+        align-items: flex-start;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 230px;
+    }
+
+    &__item {
+        width: 32%;
+
+        &-title {
+            color: $black;
+            font: 20px $font-bold;
+        }
+        
+        &-text {
+            color: $black;
+            font: 16px $font-medium;
+            margin: 20px 30px 50px;
+        }
+
+        &-image {
+            background: $green;
+            border-radius: 100%;
+            margin: 0 auto 20px;
+            padding: 25px 20px;
+            width: 90px;
+        }
+
+        &-icon {
+            height: 75px;
+            width: 75px;
+        }
+    }
 }
