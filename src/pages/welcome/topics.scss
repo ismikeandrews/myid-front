@@ -1,0 +1,49 @@
+.topics {
+    margin: 0 auto;
+    text-align: center;
+
+    &__title {
+        color: $black;
+        font: 25px $font-bold;
+    }
+    
+    &__text {
+        color: $black;
+        font: 18px $font-regular;
+        margin: 20px 0 50px;
+    }
+
+    &__list {
+        align-items: flex-start;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__item {
+        width: 32%;
+
+        &-title {
+            color: $black;
+            font: 20px $font-bold;
+        }
+        
+        &-text {
+            color: $black;
+            font: 16px/24px $font-regular;
+            margin: 20px 30px 50px;
+        }
+
+        &-image {
+            background: $green;
+            border-radius: 100%;
+            margin: 0 auto 20px;
+            padding: 25px 20px;
+            width: 90px;
+        }
+
+        &-icon {
+            height: 75px;
+            width: 75px;
+        }
+    }
+}

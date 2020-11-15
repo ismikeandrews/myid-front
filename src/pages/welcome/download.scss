@@ -1,0 +1,48 @@
+.download {
+    background: #E2E7EA;
+
+    &__title {
+        color: $black;
+        font: 25px $font-bold;
+        text-align: center;
+    }
+
+    &__list {
+        align-items: center;
+        display: flex;
+    }
+    
+    &__image {
+        text-align: center;
+        width: 40%;
+        
+        &-img {
+            width: 200px;
+        }
+    }
+    
+    &__desc {
+        width: 50%;
+        
+        &-title {
+            color: $black;
+            font: 23px $font-bold;
+            text-transform: uppercase;
+        }
+        
+        &-text {
+            color: $black;
+            font: 16px/24px $font-medium;
+            max-width: 500px;
+        }
+    }
+    
+    &__item {
+        width: 48%;
+    }
+    
+    &__icon {
+        height: 50px;
+        margin: 50px 20px 0 0;
+    }
+}

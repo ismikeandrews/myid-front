@@ -22,6 +22,10 @@ body {
   margin: 0;
   padding: 0; }
 
+.wrapper {
+  margin: auto;
+  padding: 50px 250px; }
+
 .banner {
   align-items: center;
   background-image: linear-gradient(to bottom right, #055C92, #EEE);
@@ -39,7 +43,7 @@ body {
     text-transform: uppercase; }
   .banner__text {
     color: #EFEFEF;
-    font: 20px/28px "Montserrat Medium";
+    font: 20px/28px "Montserrat Regular";
     margin: 30px 0 50px;
     max-width: 500px; }
   .banner__buttons {
@@ -68,20 +72,18 @@ body {
 
 .topics {
   margin: 0 auto;
-  padding: 50px 0;
   text-align: center; }
   .topics__title {
     color: #37474F;
     font: 25px "Montserrat Bold"; }
   .topics__text {
     color: #37474F;
-    font: 18px "Montserrat Medium";
+    font: 18px "Montserrat Regular";
     margin: 20px 0 50px; }
   .topics__list {
     align-items: flex-start;
     display: flex;
-    justify-content: space-evenly;
-    margin: 0 230px; }
+    justify-content: space-evenly; }
   .topics__item {
     width: 32%; }
     .topics__item-title {
@@ -89,7 +91,7 @@ body {
       font: 20px "Montserrat Bold"; }
     .topics__item-text {
       color: #37474F;
-      font: 16px "Montserrat Medium";
+      font: 16px/24px "Montserrat Regular";
       margin: 20px 30px 50px; }
     .topics__item-image {
       background: #059279;
@@ -100,5 +102,138 @@ body {
     .topics__item-icon {
       height: 75px;
       width: 75px; }
+
+.practical {
+  align-items: center;
+  background: #E2E7EA;
+  display: flex;
+  justify-content: space-between; }
+  .practical__item {
+    width: 49%; }
+  .practical__img {
+    margin-top: 50px;
+    width: 300px; }
+  .practical__title {
+    color: #055C92;
+    font: 25px "Montserrat Bold";
+    margin-left: -25px;
+    text-align: center; }
+  .practical__text {
+    color: #055C92;
+    font: 16px/24px "Montserrat Regular"; }
+    .practical__text--bold {
+      font-family: "Montserrat Bold"; }
+  .practical__icon {
+    width: 130px; }
+
+.security {
+  background: #055C92; }
+  .security__title {
+    color: #EFEFEF;
+    font: 25px "Montserrat Bold";
+    text-align: center; }
+  .security__text {
+    color: #EFEFEF;
+    font: 16px/24px "Montserrat Regular";
+    margin: auto;
+    max-width: 460px; }
+    .security__text--bold {
+      font-family: "Montserrat Bold"; }
+
+.autentic {
+  align-items: center;
+  background: #E2E7EA;
+  display: flex;
+  justify-content: space-between; }
+  .autentic__item {
+    width: 49%; }
+    .autentic__item--icon {
+      text-align: center;
+      width: 30%; }
+  .autentic__img {
+    margin-top: 50px;
+    width: 300px; }
+  .autentic__title {
+    color: #055C92;
+    font: 25px "Montserrat Bold";
+    margin-left: -25px;
+    text-align: center; }
+  .autentic__text {
+    color: #055C92;
+    font: 16px/24px "Montserrat Regular"; }
+    .autentic__text--bold {
+      font-family: "Montserrat Bold"; }
+  .autentic__icon {
+    width: 130px; }
+
+.news__title {
+  color: #37474F;
+  font: 25px "Montserrat Bold";
+  text-align: center; }
+.news__list {
+  align-items: center;
+  background: #EEE;
+  display: flex;
+  justify-content: center; }
+.news__item {
+  margin: 20px 15px;
+  text-align: center; }
+.news__input {
+  background: transparent;
+  border: 2px solid #055C92;
+  border-radius: 10px;
+  color: #055C92;
+  font: 16px/24px "Montserrat SemiBold";
+  outline: none;
+  padding: 10px 15px;
+  width: 400px; }
+.news__button {
+  border: 3px solid #059279;
+  background: transparent;
+  border-radius: 10px;
+  color: #059279;
+  cursor: pointer;
+  font: 18px "Montserrat Bold";
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all .5s ease-in-out;
+  width: 200px; }
+  .news__button:hover {
+    background: #059279;
+    color: #EFEFEF; }
+
+::placeholder {
+  color: #055C92; }
+
+.download {
+  background: #E2E7EA; }
+  .download__title {
+    color: #37474F;
+    font: 25px "Montserrat Bold";
+    text-align: center; }
+  .download__list {
+    align-items: center;
+    display: flex; }
+  .download__image {
+    text-align: center;
+    width: 40%; }
+    .download__image-img {
+      width: 200px; }
+  .download__desc {
+    width: 50%; }
+    .download__desc-title {
+      color: #37474F;
+      font: 23px "Montserrat Bold";
+      text-transform: uppercase; }
+    .download__desc-text {
+      color: #37474F;
+      font: 16px/24px "Montserrat Medium";
+      max-width: 500px; }
+  .download__item {
+    width: 48%; }
+  .download__icon {
+    height: 50px;
+    margin: 50px 20px 0 0; }
 
 /*# sourceMappingURL=index.css.map */

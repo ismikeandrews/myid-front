@@ -1,0 +1,20 @@
+.security {
+    background: $blue;
+    
+    &__title {
+        color: $white;
+        font: 25px $font-bold;
+        text-align: center;
+    }
+    
+    &__text {
+        color: $white;
+        font: 16px/24px $font-regular;
+        margin: auto;
+        max-width: 460px;
+
+        &--bold {
+            font-family: $font-bold;
+        }
+    }
+}
