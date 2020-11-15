@@ -41,6 +41,7 @@ body {
     width: 100%; }
   .menu__item {
     color: #EFEFEF;
+    cursor: pointer;
     font: 17px "Montserrat SemiBold";
     margin: 0 40px;
     text-decoration: none;

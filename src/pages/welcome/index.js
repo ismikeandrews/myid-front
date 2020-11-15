@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link, animateScroll as scroll } from "react-scroll";
+
 import telaDoc from '../../assets/images/telaDoc.png'
 import iconDoc from '../../assets/images/documentos.svg'
 import iconSeguranca from '../../assets/images/seguranca.svg'
@@ -14,12 +16,22 @@ export default function Welcome(){
         <div>
             <div className='menu'>
                 <div className='menu__list'>
-                    <a href='#banner' className='menu__item'>
+                    <Link className='menu__item'
+                    to='banner'
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}>
                         Início
-                    </a>
-                    <a href='#topics' className='menu__item'>
+                    </Link>
+                    <Link className='menu__item'
+                    to='topics'
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}>
                         Sobre
-                    </a>
+                    </Link>
                     {/* <div className='menu__item'>
                         Praticidade
                     </div>
@@ -29,9 +41,14 @@ export default function Welcome(){
                     <div className='menu__item'>
                         Autentificação
                     </div> */}
-                    <a href='#news' className='menu__item'>
+                    <Link className='menu__item'
+                    to='news'
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}>
                         Novidades
-                    </a>
+                    </Link>
                     {/* <div className='menu__item'>
                         Download
                     </div> */}
