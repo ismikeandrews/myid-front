@@ -57,7 +57,7 @@ export default function Welcome(){
                 <div className='menu__admin menu__item'>Admin</div>
             </div>
             
-            <div className='banner' id='banner'>
+            <div className='banner'>
                 <div className='banner__desc'>
                     <h1 className='banner__title'>Lorem Ipsum dolor sit amet</h1>
                     <p className='banner__text'>
@@ -79,7 +79,7 @@ export default function Welcome(){
                 </div>
             </div>
             
-            <div className='wrapper topics' id='topics'>
+            <div className='wrapper topics'>
                 <h1 className='topics__title'>Conheça o MyId</h1>
                 <p className='topics__text'>Tecnologia para identificação e documentação</p>
                 
@@ -167,7 +167,7 @@ export default function Welcome(){
                 </div>
             </div>
             
-            <div className='wrapper news' id='news'>
+            <div className='wrapper news'>
                 <h1 className='news__title'>Fique por dentro das novidades</h1>
                 <div className='news__list'>
                     <div className='news__item'>
