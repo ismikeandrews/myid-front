@@ -9,63 +9,32 @@ body {
     padding: 50px 250px;
 }
 
-.banner {
+.menu {
     align-items: center;
-    background-image: linear-gradient(to bottom right, $blue, $bg);
+    background: $blue;
     display: flex;
-    justify-content: space-between;
-    padding: 30px 120px 0;
-    
-    &__desc {
-        width: 65%;
-    }
-    
-    &__image {
-        width: 35%;
-    }
+    padding: 30px 0;
+    position: fixed;
+    width: 100%;
 
-    &__title {
-        color: $white;
-        font: 30px $font-semibold;
-        margin: 0;
-        text-transform: uppercase;
-    }
-    
-    &__text {
-        color: $white;
-        font: 20px/28px $font-regular;
-        margin: 30px 0 50px;
-        max-width: 500px;
-    }
-    
-    &__buttons {
+    &__list {
         align-items: center;
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
+        margin-left: 130px;
+        width: 100%;
     }
     
-    &__button {
-        border: 3px solid $white;
-        background: transparent;
-        border-radius: 10px;
+    &__item {
         color: $white;
-        cursor: pointer;
-        font: 18px $font-bold;
-        margin-right: 30px;
-        padding: 10px;
-        text-align: center;
+        font: 17px $font-semibold;
+        margin: 0 40px;
+        text-decoration: none;
         text-transform: uppercase;
-        transition: all .5s ease-in-out;
-        width: 200px;
+        transition: color .5s ease-in-out;
 
         &:hover {
-            background: $green;
-            border-color: $green;
+            color: $green;
         }
-    }
-
-    &__img {
-        margin-bottom: -5px;
-        width: 400px;
     }
 }

@@ -1,0 +1,60 @@
+.banner {
+    align-items: center;
+    background-image: linear-gradient(to bottom right, $blue, $bg);
+    display: flex;
+    justify-content: space-between;
+    padding: 120px 120px 0;
+    
+    &__desc {
+        width: 65%;
+    }
+    
+    &__image {
+        width: 35%;
+    }
+
+    &__title {
+        color: $white;
+        font: 30px $font-semibold;
+        margin: 0;
+        text-transform: uppercase;
+    }
+    
+    &__text {
+        color: $white;
+        font: 20px/28px $font-regular;
+        margin: 30px 0 50px;
+        max-width: 500px;
+    }
+    
+    &__buttons {
+        align-items: center;
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    &__button {
+        border: 3px solid $white;
+        background: transparent;
+        border-radius: 10px;
+        color: $white;
+        cursor: pointer;
+        font: 18px $font-bold;
+        margin-right: 30px;
+        padding: 10px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: all .5s ease-in-out;
+        width: 200px;
+
+        &:hover {
+            background: $green;
+            border-color: $green;
+        }
+    }
+
+    &__img {
+        margin-bottom: -5px;
+        width: 400px;
+    }
+}

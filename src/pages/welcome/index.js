@@ -12,7 +12,35 @@ import playStore from '../../assets/images/playStore.png'
 export default function Welcome(){
     return(
         <div>
-            <div className='banner'>
+            <div className='menu'>
+                <div className='menu__list'>
+                    <a href='#banner' className='menu__item'>
+                        Início
+                    </a>
+                    <a href='#topics' className='menu__item'>
+                        Sobre
+                    </a>
+                    {/* <div className='menu__item'>
+                        Praticidade
+                    </div>
+                    <div className='menu__item'>
+                        Segurança
+                    </div>
+                    <div className='menu__item'>
+                        Autentificação
+                    </div> */}
+                    <a href='#news' className='menu__item'>
+                        Novidades
+                    </a>
+                    {/* <div className='menu__item'>
+                        Download
+                    </div> */}
+                </div>
+
+                <div className='menu__admin menu__item'>Admin</div>
+            </div>
+            
+            <div className='banner' id='banner'>
                 <div className='banner__desc'>
                     <h1 className='banner__title'>Lorem Ipsum dolor sit amet</h1>
                     <p className='banner__text'>
@@ -34,7 +62,7 @@ export default function Welcome(){
                 </div>
             </div>
             
-            <div className='wrapper topics'>
+            <div className='wrapper topics' id='topics'>
                 <h1 className='topics__title'>Conheça o MyId</h1>
                 <p className='topics__text'>Tecnologia para identificação e documentação</p>
                 
@@ -122,7 +150,7 @@ export default function Welcome(){
                 </div>
             </div>
             
-            <div className='wrapper news'>
+            <div className='wrapper news' id='news'>
                 <h1 className='news__title'>Fique por dentro das novidades</h1>
                 <div className='news__list'>
                     <div className='news__item'>
