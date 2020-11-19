@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link, animateScroll as scroll } from "react-scroll";
-
+import { Link } from "react-scroll";
+import { Link as RouterLink } from 'react-router-dom';
 import telaDoc from '../../assets/images/telaDoc.png'
 import iconDoc from '../../assets/images/documentos.svg'
 import iconSeguranca from '../../assets/images/seguranca.svg'
@@ -11,7 +11,7 @@ import telaInicio from '../../assets/images/telaInicio.png'
 import appStore from '../../assets/images/appStore.png'
 import playStore from '../../assets/images/playStore.png'
 
-export default function Welcome(){
+export default function Admin(){
     return(
         <div>
             <div className='menu'>
@@ -53,8 +53,9 @@ export default function Welcome(){
                         Download
                     </div> */}
                 </div>
-
-                <div className='menu__admin menu__item'>Admin</div>
+                <RouterLink style={{"textDecoration": "none"}} to="/login">
+                    <div className='menu__admin menu__item'>Admin</div>
+                </RouterLink>
             </div>
             
             <div className='banner'>

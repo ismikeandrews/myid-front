@@ -1,0 +1,11 @@
+export {default as Usuario} from './usuario';
+export {default as Cidadao} from './cidadao';
+export {default as Documento} from './documento';
+export {default as TipoUsuario} from './tipoUsuario';
+export {default as OrgaoEmissor} from './orgaoEmissor'
+export {default as Funcionario} from './funcionario'
+export {default as DocumentoCidadao} from './documentoCidadao'
+export {default as DocumentoCampo} from './documentoCampo'
+export {default as DocumentoCampoOpcao} from './documentoCampoOpcao'
+export {default as TipoConsultor} from './tipoConsultor'
+export {default as ConsultorDocumento} from './consultorDocumento'

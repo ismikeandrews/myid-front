@@ -1,5 +1,5 @@
 const url = {
     development: 'http://localhost:8000',
-    homolog: 'production url goes here'
+    homolog: 'https://myid-dsrpt.herokuapp.com/'
 }
 export default url
