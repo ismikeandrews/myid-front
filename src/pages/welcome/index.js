@@ -117,7 +117,7 @@ export default function Welcome(){
                         <div className='topics__item-title'>Autenticidade</div>
                         
                         <div className='topics__item-text'>
-                            Autentifique seu documento
+                            Autentique seu documento
                             nos estabelecimentos sem
                             precisar pegar a carteira
                         </div>
@@ -156,8 +156,8 @@ export default function Welcome(){
                 <div className='autentic__item'>
                     <h1 className='autentic__title'>Autentificação</h1>
                     <p className='autentic__text'>
-                        Com o serviço de autentificação, você poderá transmitir
-                         seu documento via RFID para estabelecimentos, enviando
+                        Com o serviço de autenticação, você poderá transmitir
+                         seu documento contactless para estabelecimentos, enviando
                           somente informações necessárias no momento e não
                            todos os seus dados.
                     </p>
