@@ -22,16 +22,16 @@ export default function Cidadao(){
     }
 
     const handleSubmit = async event => {
-        event.preventDefault()
+        event.preventDefault();
         try {
-            const data = { cpfCidadao, codUsuario }
-            const res = await CidadaoService.createCidadao(data)
-            console.log(res)
+            const data = { cpfCidadao, codUsuario };
+            const res = await CidadaoService.createCidadao(data);
+            console.log(res);
         } catch (error) {
             console.log(error);
             alert('Ocorreu um erro durante a comunicação com o servidor');
         }
-    }
+    };
 
     return (
         <div>

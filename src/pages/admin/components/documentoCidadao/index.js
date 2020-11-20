@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { CidadaoService, DocumentoService} from '../../../../services';
+import { CidadaoService, DocumentoService } from '../../../../services';
 
 export default function DocumentoCidadao(){  
     const [frenteDocumentoCidadao, setFrenteDocumentoCidadao] = useState('');
@@ -22,11 +22,23 @@ export default function DocumentoCidadao(){
             setDocumentoList(res.data);
         } catch (error) {
             console.log(error);
-            // alert('Ocorreu um erro durante a comunicação com o servidor');
+            alert('Ocorreu um erro durante a comunicação com o servidor');
         }
     };
 
-    return(
+    const handleSubmit = async event => {
+        event.preventDefault();
+        try {
+            const data = { frenteDocumentoCidadao, versoDocumentoCidadao, codCidadao, codDocumento };
+            const res = await CidadaoService.createCidadaoDocumento(data);
+            console.log(res);
+        } catch (error) {
+            console.log(error);
+            alert('Ocorreu um erro durante a comunicação com o servidor');
+        }
+    };
+
+    return (
         <div>
             <h3>Documento Cidadao Component</h3>
             <hr/>
@@ -49,6 +61,8 @@ export default function DocumentoCidadao(){
                             <option key={cidadao.codCidadao} value={cidadao.codCidadao}>{cidadao.cpfCidadao}</option>
                         ))}
                     </select>
+                    <br/>
+                    <button onClick={handleSubmit}>Cadastrar</button>
                 </form>
             </div>
         </div>
