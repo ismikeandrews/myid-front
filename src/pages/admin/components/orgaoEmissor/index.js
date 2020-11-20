@@ -19,16 +19,24 @@ export default function OrgaoEmissor(){
     };
 
     return (
-        <div>
-            <h3>Orgao Emissor Component</h3>
-            <hr/>
+        <div className="admin__item">
+            <h3 className="title">Orgao Emissor Component</h3>
+            
             <div>
-                <form>
-                    <input type="text" placeholder="Nome do Orgão Emissor" value={nomeOrgaoEmissor} onChange={event => setNomeOrgaoEmissor(event.target.value)}/>
-                    <br/>
-                    <input type="text" placeholder="Sigla" value={siglaOrgaoEmissor} onChange={event => setSiglaOrgaoEmissor(event.target.value)}/>
-                    <br/>
-                    <button onClick={handleSubmit}>Cadastro</button>
+                <form className="form">
+                    <div>
+                        <div className="form__label">Nome do Orgão Emissor:</div>
+                        <input className="form__input" value={nomeOrgaoEmissor} onChange={event => setNomeOrgaoEmissor(event.target.value)}/>
+                    </div>
+                    
+                    <div>
+                        <div className="form__label">Sigla:</div>
+                        <input className="form__input" type="text" value={siglaOrgaoEmissor} onChange={event => setSiglaOrgaoEmissor(event.target.value)}/>
+                    </div>
+                    
+                    <div className="form__button-content">
+                        <button className="button form__button" onClick={handleSubmit}>Cadastro</button>
+                    </div>
                 </form>
             </div>
         </div>

@@ -50,6 +50,16 @@ body {
     .menu__item:hover {
       color: #059279; }
 
+.title {
+  color: #055C92;
+  font: 22px "Montserrat SemiBold";
+  margin-bottom: 20px; }
+
+.buttons {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start; }
+
 .button {
   border: 3px solid #EFEFEF;
   background: transparent;
@@ -88,10 +98,6 @@ body {
     font: 20px/28px "Montserrat Regular";
     margin: 30px 0 50px;
     max-width: 500px; }
-  .banner__buttons {
-    align-items: center;
-    display: flex;
-    justify-content: flex-start; }
   .banner__img {
     margin-bottom: -5px;
     width: 400px; }
@@ -111,14 +117,14 @@ body {
     display: flex;
     justify-content: space-evenly; }
   .topics__item {
-    width: 32%; }
+    width: 35%; }
     .topics__item-title {
       color: #37474F;
       font: 20px "Montserrat Bold"; }
     .topics__item-text {
       color: #37474F;
       font: 16px/24px "Montserrat Regular";
-      margin: 20px 30px 50px; }
+      margin: 20px 20px 50px; }
     .topics__item-image {
       background: #059279;
       border-radius: 100%;
@@ -330,5 +336,68 @@ body {
       background: url(../assets/images/effects_bottom_right.png) no-repeat;
       right: 0;
       width: 115px; }
+
+.admin {
+  align-items: flex-start;
+  display: flex; }
+  .admin__menu {
+    background: #055C92;
+    color: #EFEFEF;
+    font: 20px "Montserrat Bold";
+    height: 100vh;
+    text-align: center;
+    width: 25%; }
+  .admin__container {
+    height: 85vh;
+    overflow-y: scroll;
+    padding: 20px 30px;
+    width: 75%; }
+  .admin__item {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    position: relative; }
+    .admin__item:before {
+      background: #bababa;
+      content: '';
+      height: 1px;
+      bottom: 0;
+      position: absolute;
+      width: 100%; }
+
+.form__label {
+  color: #055C92;
+  font: 16px "Montserrat Medium";
+  margin-top: 10px; }
+.form__input {
+  color: #055C92;
+  background: transparent;
+  border: 2px solid #055C92;
+  border-radius: 3px;
+  font: 15px "Montserrat Regular";
+  margin: 10px 0;
+  outline: none;
+  padding: 10px;
+  width: 280px; }
+.form__select {
+  color: #055C92;
+  background: transparent;
+  border: 2px solid #055C92;
+  border-radius: 3px;
+  font: 15px "Montserrat Regular";
+  margin: 10px 0;
+  outline: none;
+  padding: 10px;
+  width: 305px; }
+.form__button {
+  border: 2px solid #059279;
+  border-radius: 5px;
+  color: #059279;
+  font: 15px "Montserrat Bold";
+  margin: 20px 0 0;
+  padding: 5px 10px;
+  width: 130px; }
+  .form__button:hover {
+    background: #059279;
+    color: #EFEFEF; }
 
 /*# sourceMappingURL=index.css.map */

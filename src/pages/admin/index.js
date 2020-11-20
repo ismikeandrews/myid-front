@@ -17,20 +17,29 @@ import {
 
 export default function Admin(){
     return(
-        <div>
-            <h1>Admin Page</h1>
-            <TipoUsuario/>
-            <Usuario/>
-            <Cidadao/>
-            <OrgaoEmissor/>
-            <Documento/>
-            <Funcionario/>
-            <DocumentoCidadao/>
-            <DocumentoCampo/>
-            <DocumentoCampoOpcao/>
-            <TipoConsultor/>
-            <Consultor/>
-            <ConsultorDocumento/>
+        <div className="admin">
+
+            <div className="admin__menu">
+                <h1>Admin Page</h1>
+            </div>
+
+            <div className="admin__container">
+                {/* <TipoUsuario/> */}
+                {/* <Usuario/> */}
+                
+                <OrgaoEmissor/>
+                <Funcionario/>
+                
+                <Cidadao/>
+                <Documento/>
+                <DocumentoCidadao/>
+                <DocumentoCampo/>
+                <DocumentoCampoOpcao/>
+                
+                <TipoConsultor/>
+                <Consultor/>
+                <ConsultorDocumento/>
+            </div>
         </div>
     )
 }
