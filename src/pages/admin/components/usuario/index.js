@@ -16,12 +16,24 @@ export default function Usuario(){
     const fetchData = async () => {
         try { 
             const { data } = await UsuarioService.getTipoUsuarioList();
-            // setTipoUsuarioList(data);
+            setTipoUsuarioList(data);
         } catch (error) {
             console.log(error);
-            // alert('Ocorreu um erro durante a comunicação com o servidor');
+            alert('Ocorreu um erro durante a comunicação com o servidor');
         }
     };
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        try {
+            const data = {loginUsuario, senhaUsuario, codTipoUsuario}
+            const res = await UsuarioService.createUsuario(data)
+            console.log(res)
+        } catch (error) {
+            console.log(error);
+            alert('Ocorreu um erro durante a comunicação com o servidor');
+        }
+    }
 
     return (
         <div>
@@ -36,11 +48,13 @@ export default function Usuario(){
                     <input type="password" placeholder="Confirme a Senha" value={passwordConfirm} onChange={event => setPasswordConfirm(event.target.value)}/>
                     <br/>
                     <select value={codTipoUsuario} onChange={event => setCodTipoUsuario(event.target.value)}>
-                        <option selected>Tipo de usuario</option>
+                        <option defaultValue>Tipo de usuario</option>
                         {tipoUsuarioList.map(tipoUsuario => (
                             <option key={tipoUsuario.codTipoUsuario} value={tipoUsuario.codTipoUsuario}>{tipoUsuario.nomeTipoUsuario}</option>
                         ))}
                     </select>
+                    <br/>
+                    <button onClick={handleSubmit}>Cadastrar</button>
                 </form>
             </div>
         </div>

@@ -33,7 +33,7 @@ export default function Consultor(){
                     <input type="text" placeholder="CNPJ" value={cnpjConsultor} onChange={event => setCnpjConsultor(event.target.value)}/>
                     <br/>
                     <select value={codTipoConsultor} onChange={event => setCodTipoConsultor(event.target.value)}>
-                        <option selected>Tipo consultor</option>
+                        <option defaultValue>Tipo consultor</option>
                         {tipoConsultorList.map(tipoConsultor => {
                             <option key={tipoConsultor.codTipoConsultor} value={tipoConsultor.codTipoConsultor}>{tipoConsultor.nomeTipoConsultor}</option>
                         })}

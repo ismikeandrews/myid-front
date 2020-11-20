@@ -16,8 +16,8 @@ const CidadaoService = {
         return await axios.get(`${url.development}/${prefix}/${codCidadao}`);
     },
 
-    async updateCidadao(codCidadao){
-        return await axios.put(`${url.development}/${prefix}/${codCidadao}`);
+    async updateCidadao(codCidadao, data){
+        return await axios.put(`${url.development}/${prefix}/${codCidadao}`, data);
     },
 
     async destroyCidadao(codCidadao){

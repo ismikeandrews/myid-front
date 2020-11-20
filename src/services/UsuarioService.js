@@ -16,8 +16,8 @@ const UsuarioService = {
         return await axios.get(`${url.development}/${prefix}/${codUsuario}`);
     },
 
-    async updateUsuario(codUsuario){
-        return await axios.put(`${url.development}/${prefix}/${codUsuario}`);
+    async updateUsuario(codUsuario, data){
+        return await axios.put(`${url.development}/${prefix}/${codUsuario}`, data);
     },
 
     async destroyUsuario(codUsuario){
@@ -36,8 +36,8 @@ const UsuarioService = {
         return await axios.get(`${url.development}/${prefix}/tipo/${codTipoUsuario}`);
     },
 
-    async updateTipoUsuario(codTipoUsuario){
-        return await axios.put(`${url.development}/${prefix}/tipo/${codTipoUsuario}`);
+    async updateTipoUsuario(codTipoUsuario, data){
+        return await axios.put(`${url.development}/${prefix}/tipo/${codTipoUsuario}`, data);
     },
 
     async destroyTipoUsuario(codTipoUsuario){

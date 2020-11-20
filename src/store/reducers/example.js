@@ -1,6 +1,6 @@
 // const INITIAL_STATE = {
 //     contacts : [],
-//     selectedContact : null
+//     defaultValueContact : null
 // }
 
 // const contact = (state = INITIAL_STATE, action) => {

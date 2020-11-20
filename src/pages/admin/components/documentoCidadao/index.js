@@ -37,7 +37,7 @@ export default function DocumentoCidadao(){
                     <input type="text" placeholder="Verso Documento" value={versoDocumentoCidadao} onChange={event => setVersoDocumentoCidadao(event.target.value)}/>
                     <br/>
                     <select value={codDocumento} onChange={event => setCodDocumento(event.target.value)}>
-                        <option selected>Documento</option>
+                        <option defaultValue>Documento</option>
                         {documentoList.map(documento => (
                             <option key={documento.codDocumento} value={documento.codDocumento}>{documento.nomeDocumento}</option>
                         ))}

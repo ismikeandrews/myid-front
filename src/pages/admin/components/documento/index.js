@@ -33,7 +33,7 @@ export default function Documento(){
                     <input type="text" placeholder="Imagem do documento" value={imagemDocumento} onChange={event => setImagemDocumento(event.target.value)}/>
                     <br/>
                     <select value={codOrgaoEmissior} onChange={event => setCodOrgaoEmissor(event.target.value)}>
-                        <option selected>Orgão emissor</option>
+                        <option defaultValue>Orgão emissor</option>
                         {orgaoEmissorList.map(orgaoEmissor => (
                             <option key={orgaoEmissor.codOrgaoEmissior} value={orgaoEmissor.codOrgaoEmissior}>{orgaoEmissor.siglaOrgaoEmissor}</option>
                         ))}

@@ -31,14 +31,14 @@ export default function Funcionario(){
             <div>
                 <form>
                     <select value={codUsuario} onChange={setCodUsuario}>
-                        <option selected>Usuario</option>
+                        <option defaultValue>Usuario</option>
                         {usuarioList.map(usuario => (
                             <option key={usuario.codUsuario} value={usuario.codUsuario}>{usuario.loginUsuario}</option>
                         ))}
                     </select>
                     <br/>
                     <select value={codOrgaoEmissor} onChange={event => setCodEmissor(event.target.value)}>
-                        <option selected>Orgão Emissor</option>
+                        <option defaultValue>Orgão Emissor</option>
                         {orgaoEmissorList.map(orgaoEmissor => (
                             <option key={orgaoEmissor.codOrgaoEmissor} value={orgaoEmissor.codOrgaoEmissor}>{orgaoEmissor.siglaOrgaoEmissor}</option>
                         ))}

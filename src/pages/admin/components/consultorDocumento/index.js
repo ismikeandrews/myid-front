@@ -30,14 +30,14 @@ export default function ConsultorDocumento(){
             <div>
                 <form>
                     <select value={codConsultor} onChange={event => setCodConsultor(event.target.value)}>
-                        <option selected>Consultores</option>
+                        <option defaultValue>Consultores</option>
                         {consultorList.map(consultor => (
                             <option key={consultor.codConsultor} value={consultor.codConsultor}>{consultor.nomeConsultor}</option>
                         ))}
                     </select>
                     <br/>
                     <select value={codDocumento} onChange={event => setCodDocumento(event.target.value)}>
-                        <option selected>Documentos</option>
+                        <option defaultValue>Documentos</option>
                         {documentoList.map(documento => (
                             <option key={documento.codDocumento} value={documento.codDocumento}>{documento.nomeDocumento}</option>
                         ))}

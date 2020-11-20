@@ -11,7 +11,7 @@ import telaInicio from '../../assets/images/telaInicio.png'
 import appStore from '../../assets/images/appStore.png'
 import playStore from '../../assets/images/playStore.png'
 
-export default function Admin(){
+export default function Welcome(){
     return(
         <div>
             <div className='menu'>
