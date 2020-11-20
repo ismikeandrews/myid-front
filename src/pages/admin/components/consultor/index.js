@@ -15,10 +15,22 @@ export default function Consultor(){
     const fetchData = async () => {
         try {
             const { data } = await ConsultorService.getTipoConsultorList();
-            // setTipoConsultorList(data);
+            setTipoConsultorList(data);
         } catch (error) {
             console.log(error);
-            // alert('Ocorreu um erro durante a comunicação com o servidor');
+            alert('Ocorreu um erro durante a comunicação com o servidor');
+        }
+    };
+
+    const handleSubmit = async event => {
+        event.preventDefault();
+        try {
+            const data = { nomeConsultor, cnpjConsultor, codTipoConsultor };
+            const res = await ConsultorService.createConsultor(data);
+            console.log(res);
+        } catch (error) {
+            console.log(error);
+            alert('Ocorreu um erro durante a comunicação com o servidor');
         }
     };
 
@@ -34,10 +46,12 @@ export default function Consultor(){
                     <br/>
                     <select value={codTipoConsultor} onChange={event => setCodTipoConsultor(event.target.value)}>
                         <option defaultValue>Tipo consultor</option>
-                        {tipoConsultorList.map(tipoConsultor => {
+                        {tipoConsultorList.map(tipoConsultor => (
                             <option key={tipoConsultor.codTipoConsultor} value={tipoConsultor.codTipoConsultor}>{tipoConsultor.nomeTipoConsultor}</option>
-                        })}
+                        ))}
                     </select>
+                    <br/>
+                    <button onClick={handleSubmit}>Cadastrar</button>
                 </form>
             </div>
         </div>

@@ -23,17 +23,17 @@ export default function Usuario(){
         }
     };
 
-    const handleSubmit = async (event) => {
+    const handleSubmit = async event => {
         event.preventDefault();
         try {
-            const data = {loginUsuario, senhaUsuario, codTipoUsuario}
-            const res = await UsuarioService.createUsuario(data)
-            console.log(res)
+            const data = {loginUsuario, senhaUsuario, codTipoUsuario};
+            const res = await UsuarioService.createUsuario(data);
+            console.log(res);
         } catch (error) {
             console.log(error);
             alert('Ocorreu um erro durante a comunicação com o servidor');
         }
-    }
+    };
 
     return (
         <div>

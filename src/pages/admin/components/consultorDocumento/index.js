@@ -15,14 +15,26 @@ export default function ConsultorDocumento(){
     const fetchData = async () => {
         try {
             const { data } = await ConsultorService.getConsultorList();
-            // setConsultorList(data);
+            setConsultorList(data);
             const res = await DocumentoService.getDocumentoList();
-            // setDocumentoList(res.data);
+            setDocumentoList(res.data);
         } catch (error) {
             console.log(error);
-            // alert('Ocorreu um erro durante a comunicação com o servidor');   
+            alert('Ocorreu um erro durante a comunicação com o servidor');   
         }
-    }
+    };
+
+    const handleSubmit = async event => {
+        event.preventDefault();
+        try {
+            const data = { codConsultor, codDocumento };
+            const res = await ConsultorService.createConsultorDocumento(data);
+            console.log(res);
+        } catch (error) {
+            console.log(error);
+            alert('Ocorreu um erro durante a comunicação com o servidor'); 
+        }
+    };
 
     return (
         <div>
@@ -42,6 +54,8 @@ export default function ConsultorDocumento(){
                             <option key={documento.codDocumento} value={documento.codDocumento}>{documento.nomeDocumento}</option>
                         ))}
                     </select>
+                    <br/>
+                    <button onClick={handleSubmit}>Cadastrar</button>
                 </form>
             </div>
         </div>

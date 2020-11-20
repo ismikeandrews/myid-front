@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { UsuarioService, OrgaoEmissorService } from '../../../../services';
+import { UsuarioService, OrgaoEmissorService, } from '../../../../services';
 
 export default function Funcionario(){
     const [usuarioList, setUsuarioList] = useState([]);
@@ -15,12 +15,24 @@ export default function Funcionario(){
     const fetchData = async () => {
         try {
             const { data } = await UsuarioService.getUsuarioList();
-            // setUsuarioList(data);
+            setUsuarioList(data);
             const res = await OrgaoEmissorService.getOrgaoEmissorList();
-            // setOrgaoEmissorList(res.data);
+            setOrgaoEmissorList(res.data);
         } catch (error) {
             console.log(error);
-            // alert('Ocorreu um erro durante a comunicação com o servidor');
+            alert('Ocorreu um erro durante a comunicação com o servidor');
+        }
+    };
+
+    const handleSubmit = async event => {
+        event.preventDefault();
+        try {
+            const data = {codUsuario, codOrgaoEmissor};
+            const res = await OrgaoEmissorService.createFuncionario(data);
+            console.log(res);
+        } catch (error) {
+            console.log(error);
+            alert('Ocorreu um erro durante a comunicação com o servidor');
         }
     };
 
@@ -30,7 +42,7 @@ export default function Funcionario(){
             <hr/>
             <div>
                 <form>
-                    <select value={codUsuario} onChange={setCodUsuario}>
+                    <select value={codUsuario} onChange={event => setCodUsuario(event.target.value)}>
                         <option defaultValue>Usuario</option>
                         {usuarioList.map(usuario => (
                             <option key={usuario.codUsuario} value={usuario.codUsuario}>{usuario.loginUsuario}</option>
@@ -43,6 +55,8 @@ export default function Funcionario(){
                             <option key={orgaoEmissor.codOrgaoEmissor} value={orgaoEmissor.codOrgaoEmissor}>{orgaoEmissor.siglaOrgaoEmissor}</option>
                         ))}
                     </select>
+                    <br/>
+                    <button onClick={handleSubmit}>Cadastrar</button>
                 </form>
             </div>
         </div>

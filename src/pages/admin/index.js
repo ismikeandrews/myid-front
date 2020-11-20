@@ -11,7 +11,8 @@ import {
     DocumentoCampo, 
     DocumentoCampoOpcao,
     TipoConsultor,
-    ConsultorDocumento
+    ConsultorDocumento,
+    Consultor
 } from './components'
 
 export default function Admin(){
@@ -28,6 +29,7 @@ export default function Admin(){
             <DocumentoCampo/>
             <DocumentoCampoOpcao/>
             <TipoConsultor/>
+            <Consultor/>
             <ConsultorDocumento/>
         </div>
     )

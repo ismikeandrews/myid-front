@@ -8,14 +8,14 @@ export default function TipoUsuario(){
     const handleSubmit = async event => {
         event.preventDefault();
         try {
-            nomeTipoUsuario !== "" && UsuarioService.createTipoUsuario({nomeTipoUsuario})
+            nomeTipoUsuario !== "" && UsuarioService.createTipoUsuario({nomeTipoUsuario});
         } catch (error) {
             console.log(error);
             alert('Ocorreu um erro durante a comunicação com o servidor');
         }
-    }
+    };
 
-    return(
+    return (
         <div>
             <h3>Tipo Usuario Component</h3>
             <hr/>

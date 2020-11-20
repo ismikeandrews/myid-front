@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-import { OrgaoEmissorService } from '../../../../services';
+import { OrgaoEmissorService, DocumentoService } from '../../../../services';
 
 export default function Documento(){
     const [nomeDocumento, setNomeDocumento] = useState('');
     const [imagemDocumento, setImagemDocumento] = useState('');
-    const [codOrgaoEmissior, setCodOrgaoEmissor] = useState(undefined);
+    const [codOrgaoEmissor, setCodOrgaoEmissor] = useState(undefined);
     const [orgaoEmissorList, setOrgaoEmissorList] = useState([]);
 
     useEffect(() => {
@@ -15,10 +15,22 @@ export default function Documento(){
     const fetchData = async () => {
         try {
             const { data } = await OrgaoEmissorService.getOrgaoEmissorList();
-            // setOrgaoEmissorList(data);
+            setOrgaoEmissorList(data);
         } catch (error) {
             console.log(error);
-            // alert('Ocorreu um erro durante a comunicação com o servidor');
+            alert('Ocorreu um erro durante a comunicação com o servidor');
+        }
+    };
+
+    const handleSubmit = async event => {
+        event.preventDefault();
+        try {
+            const data = { nomeDocumento, imagemDocumento, codOrgaoEmissor};
+            const res = await DocumentoService.createDocumento(data);
+            console.log(res);
+        } catch (error) {
+            console.log(error);
+            alert('Ocorreu um erro durante a comunicação com o servidor');
         }
     };
 
@@ -32,12 +44,14 @@ export default function Documento(){
                     <br/>
                     <input type="text" placeholder="Imagem do documento" value={imagemDocumento} onChange={event => setImagemDocumento(event.target.value)}/>
                     <br/>
-                    <select value={codOrgaoEmissior} onChange={event => setCodOrgaoEmissor(event.target.value)}>
+                    <select value={codOrgaoEmissor} onChange={event => setCodOrgaoEmissor(event.target.value)}>
                         <option defaultValue>Orgão emissor</option>
                         {orgaoEmissorList.map(orgaoEmissor => (
-                            <option key={orgaoEmissor.codOrgaoEmissior} value={orgaoEmissor.codOrgaoEmissior}>{orgaoEmissor.siglaOrgaoEmissor}</option>
+                            <option key={orgaoEmissor.codOrgaoEmissor} value={orgaoEmissor.codOrgaoEmissor}>{orgaoEmissor.siglaOrgaoEmissor}</option>
                         ))}
                     </select>
+                    <br/>
+                    <button onClick={handleSubmit}>Cadastrar</button>
                 </form>
             </div>
         </div>

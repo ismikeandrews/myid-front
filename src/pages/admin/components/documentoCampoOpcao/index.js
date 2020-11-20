@@ -15,14 +15,26 @@ export default function DocumentoCampoOpcao(){
     const fetchData = async () => {
         try {
             const { data } = await DocumentoService.getDocumentoCampoList();
-            // setDocumentoCampoList(data);
+            setDocumentoCampoList(data);
         } catch (error) {
             console.log(error);
-            // alert('Ocorreu um erro durante a comunicação com o servidor');
+            alert('Ocorreu um erro durante a comunicação com o servidor');
         }
     };
 
-    return(
+    const handleSubmit = async event => {
+        event.preventDefault();
+        try {
+            const data = {nomeOpcao, valorOpcao, codDocumentoCampo};
+            const res = await DocumentoService.createDocumentoCampoOpcao(data);
+            console.log(res);
+        } catch (error) {
+            console.log(error);
+            alert('Ocorreu um erro durante a comunicação com o servidor');
+        }
+    };
+
+    return (
         <div>
             <h3>Documento Campo Opção Component</h3>
             <hr/>
@@ -38,6 +50,8 @@ export default function DocumentoCampoOpcao(){
                             <option key={documentoCampo.codDocumentoCampo} value={documentoCampo.codDocumentoCampo}>{documentoCampo.nomeCampo}</option>
                         ))}
                     </select>
+                    <br/>
+                    <button onClick={handleSubmit}>Cadastrar</button>
                 </form>
             </div>
         </div>
