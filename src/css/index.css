@@ -50,6 +50,24 @@ body {
     .menu__item:hover {
       color: #059279; }
 
+.button {
+  border: 3px solid #EFEFEF;
+  background: transparent;
+  border-radius: 10px;
+  color: #EFEFEF;
+  cursor: pointer;
+  font: 18px "Montserrat Bold";
+  margin-right: 30px;
+  outline: none;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all .5s ease-in-out;
+  width: 200px; }
+  .button:hover {
+    background: #059279;
+    border-color: #059279; }
+
 .banner {
   align-items: center;
   background-image: linear-gradient(to bottom right, #055C92, #EEE);
@@ -74,22 +92,6 @@ body {
     align-items: center;
     display: flex;
     justify-content: flex-start; }
-  .banner__button {
-    border: 3px solid #EFEFEF;
-    background: transparent;
-    border-radius: 10px;
-    color: #EFEFEF;
-    cursor: pointer;
-    font: 18px "Montserrat Bold";
-    margin-right: 30px;
-    padding: 10px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: all .5s ease-in-out;
-    width: 200px; }
-    .banner__button:hover {
-      background: #059279;
-      border-color: #059279; }
   .banner__img {
     margin-bottom: -5px;
     width: 400px; }
@@ -259,5 +261,74 @@ body {
   .download__icon {
     height: 50px;
     margin: 50px 20px 0 0; }
+
+.login {
+  background: #055C92;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 100vw; }
+  .login__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center; }
+  .login__effects-top {
+    position: relative; }
+    .login__effects-top:before, .login__effects-top:after {
+      content: '';
+      height: 140px;
+      position: absolute;
+      top: 0; }
+    .login__effects-top:before {
+      background: url(../assets/images/effects_top_left.png) no-repeat;
+      left: 0;
+      width: 150px; }
+    .login__effects-top:after {
+      background: url(../assets/images/effects_top_right.png) no-repeat;
+      right: 0;
+      width: 135px; }
+  .login__title {
+    color: #EFEFEF;
+    font: 20px "Montserrat SemiBold";
+    margin-bottom: 20px; }
+  .login__form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .login__label {
+    color: #EFEFEF;
+    font: 16px "Montserrat Regular"; }
+  .login__input {
+    color: #EFEFEF;
+    background: transparent;
+    border: 3px solid #EFEFEF;
+    border-radius: 5px;
+    font: 17px "Montserrat Regular";
+    margin: 10px 0;
+    outline: none;
+    padding: 15px;
+    width: 300px; }
+  .login__button {
+    margin: 20px 0 0; }
+  .login__effects-bottom {
+    position: relative; }
+    .login__effects-bottom:before, .login__effects-bottom:after {
+      content: '';
+      height: 140px;
+      position: absolute;
+      bottom: 0; }
+    .login__effects-bottom:before {
+      background: url(../assets/images/effects_bottom_left.png) no-repeat;
+      bottom: -13px;
+      left: 0;
+      width: 150px; }
+    .login__effects-bottom:after {
+      background: url(../assets/images/effects_bottom_right.png) no-repeat;
+      right: 0;
+      width: 115px; }
 
 /*# sourceMappingURL=index.css.map */

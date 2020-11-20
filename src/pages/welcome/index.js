@@ -65,11 +65,11 @@ export default function Welcome(){
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae nunc quis mi condimentum congue.
                     </p>
 
-                    <div className='banner__buttons'>
-                        <div className='banner__button'>
+                    <div className='buttons'>
+                        <div className='button'>
                             Lorem
                         </div>
-                        <div className='banner__button'>
+                        <div className='button'>
                             Ipsum
                         </div>
                     </div>
