@@ -24,8 +24,8 @@ export default function Admin(){
             </div>
 
             <div className="admin__container">
-                {/* <TipoUsuario/> */}
-                {/* <Usuario/> */}
+                <TipoUsuario/>
+                <Usuario/>
                 
                 <OrgaoEmissor/>
                 <Funcionario/>

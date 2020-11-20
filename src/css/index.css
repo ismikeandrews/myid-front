@@ -348,7 +348,7 @@ body {
     text-align: center;
     width: 25%; }
   .admin__container {
-    height: 85vh;
+    height: 90vh;
     overflow-y: scroll;
     padding: 20px 30px;
     width: 75%; }
