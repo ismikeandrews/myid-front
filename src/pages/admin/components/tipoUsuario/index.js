@@ -16,14 +16,17 @@ export default function TipoUsuario(){
     };
 
     return (
-        <div>
-            <h3>Tipo Usuario Component</h3>
-            <hr/>
+        <div className="admin__item">
+            <h3 className="title">Tipo Usuário Component</h3>
+            
             <div>
-                <form>
-                    <input type="text" placeholder="Tipo de Usuario" value={nomeTipoUsuario} onChange={event => setNomeTipoUsuario(event.target.value)}/>
-                    <br/>
-                    <button onClick={handleSubmit}>Cadastrar</button>
+                <form className="form">
+                    <div className="form__label">Tipo usuário:</div>
+                    <input className="form__input" value={nomeTipoUsuario} onChange={event => setNomeTipoUsuario(event.target.value)}/>
+                    
+                    <div className="form__button-content">
+                        <button className="button form__button" onClick={handleSubmit}>Cadastrar</button>
+                    </div>
                 </form>
             </div>
         </div>

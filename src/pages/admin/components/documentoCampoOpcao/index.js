@@ -35,23 +35,34 @@ export default function DocumentoCampoOpcao(){
     };
 
     return (
-        <div>
-            <h3>Documento Campo Opção Component</h3>
-            <hr/>
+        <div className="admin__item">
+            <h3 className="title">Documento Campo Opção Component</h3>
+            
             <div>
-                <form>
-                    <input type="text" placeholder="Nome Opção" value={nomeOpcao} onChange={event => setNomeOpcao(event.target.value)}/>
-                    <br/>
-                    <input type="text" placeholder="Valor Opção" value={valorOpcao} onChange={event => setValorOpcao(event.target.value)}/>
-                    <br/>
-                    <select value={codDocumentoCampo} onChange={event => setCodDocumentoCampo(event.target.value)}>
-                        <option>Campo Documento</option>
-                        {documentoCampoList.map(documentoCampo => (
-                            <option key={documentoCampo.codDocumentoCampo} value={documentoCampo.codDocumentoCampo}>{documentoCampo.nomeCampo}</option>
-                        ))}
-                    </select>
-                    <br/>
-                    <button onClick={handleSubmit}>Cadastrar</button>
+                <form className="form">
+                    <div>
+                        <div className="form__label">Nome opção:</div>
+                        <input className="form__input" type="text" value={nomeOpcao} onChange={event => setNomeOpcao(event.target.value)}/>
+                    </div>
+                    
+                    <div>
+                        <div className="form__label">Valor opção:</div>
+                        <input className="form__input" type="text" value={valorOpcao} onChange={event => setValorOpcao(event.target.value)}/>
+                    </div>
+                    
+                    <div className="form__select-content">
+                        <div className="form__label">Documento:</div>
+                        <select className="form__select" value={codDocumentoCampo} onChange={event => setCodDocumentoCampo(event.target.value)}>
+                            <option>Campo Documento</option>
+                            {documentoCampoList.map(documentoCampo => (
+                                <option key={documentoCampo.codDocumentoCampo} value={documentoCampo.codDocumentoCampo}>{documentoCampo.nomeCampo}</option>
+                            ))}
+                        </select>
+                    </div>
+
+                    <div className="form__button-content">
+                        <button className="button form__button" onClick={handleSubmit}>Cadastrar</button>
+                    </div>
                 </form>
             </div>
         </div>

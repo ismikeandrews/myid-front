@@ -1,0 +1,96 @@
+.login {
+    background: $blue;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 100vw;
+    
+    &__content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+    }
+
+    &__effects-top {
+        position: relative;
+        
+        &:before, &:after {
+            content: '';
+            height: 140px;
+            position: absolute;
+            top: 0;
+        }
+        
+        &:before {
+            background: url(../assets/images/effects_top_left.png) no-repeat;
+            left: 0;
+            width: 150px;
+        }
+        
+        &:after {
+            background: url(../assets/images/effects_top_right.png) no-repeat;
+            right: 0;
+            width: 135px;
+        }
+    }
+
+    &__title {
+        color: $white;
+        font: 20px $font-semibold;
+        margin-bottom: 20px;
+    }
+
+    &__form {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__label {
+        color: $white;
+        font: 16px $font-regular;
+    }
+    &__input {
+        color: $white;
+        background: transparent;
+        border: 3px solid $white;
+        border-radius: 5px;
+        font: 17px $font-regular;
+        margin: 10px 0;
+        outline: none;
+        padding: 15px;
+        width: 300px;
+    }
+
+    &__button {
+        margin: 20px 0 0;
+    }
+
+    &__effects-bottom {
+        position: relative;
+
+        &:before, &:after {
+            content: '';
+            height: 140px;
+            position: absolute;
+            bottom: 0;
+        }
+        
+        &:before {
+            background: url(../assets/images/effects_bottom_left.png) no-repeat;
+            bottom: -13px;
+            left: 0;
+            width: 150px;
+        }
+        
+        &:after {
+            background: url(../assets/images/effects_bottom_right.png) no-repeat;
+            right: 0;
+            width: 115px;
+        }
+    }
+}

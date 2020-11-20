@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-scroll";
 import { Link as RouterLink } from 'react-router-dom';
+
 import telaDoc from '../../assets/images/telaDoc.png'
 import iconDoc from '../../assets/images/documentos.svg'
 import iconSeguranca from '../../assets/images/seguranca.svg'
@@ -65,11 +66,11 @@ export default function Welcome(){
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae nunc quis mi condimentum congue.
                     </p>
 
-                    <div className='banner__buttons'>
-                        <div className='banner__button'>
+                    <div className='buttons'>
+                        <div className='button'>
                             Lorem
                         </div>
-                        <div className='banner__button'>
+                        <div className='button'>
                             Ipsum
                         </div>
                     </div>
@@ -137,7 +138,7 @@ export default function Welcome(){
                         Seria uma mão na roda, não é mesmo?
                     </p>
                     <p className='practical__text'>
-                        Pois com nosso aplicativo, você tem essa possibilidade.<br/>
+                        Pois com nosso aplicativo, você tem essa possibilidade.
                         <span className='practical__text--bold'> Chega de papelada e burocracia.</span> Em um único lugar
                         tenha acesso à informações como: RG, CPF, Passaporte, certidões, tudo de forma rápida e fácil.
                     </p>

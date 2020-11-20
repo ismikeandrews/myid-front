@@ -34,21 +34,27 @@ export default function Cidadao(){
     };
 
     return (
-        <div>
-            <h3>Cidadao Component</h3>
-            <hr/>
+        <div className="admin__item">
+            <h3 className="title">Cadastro de cidadão</h3>
+
             <div>
-                <form>
-                    <input type="text" placeholder="CPF" value={cpfCidadao} onChange={event => setCpfCidadao(event.target.value)}/>
-                    <br/>
-                    <select value={codUsuario} onChange={event => setCodUsuario(event.target.value)}>
-                        <option defaultValue>Usuario</option>
-                        {usuarioList.map(usuario => (
-                            <option key={usuario.codUsuario} value={usuario.codUsuario}>{usuario.loginUsuario}</option>
-                        ))}
-                    </select>
-                    <br/>
-                    <button onClick={handleSubmit}>Cadastrar</button>
+                <form className="form">
+                    <div className="form__label">CPF:</div>
+                    <input className="form__input" type="text" value={cpfCidadao} onChange={event => setCpfCidadao(event.target.value)}/>
+                    
+                    <div className="form__label">Usuário:</div>
+                    <div className="form__select-content">
+                        <select className="form__select" value={codUsuario} onChange={event => setCodUsuario(event.target.value)}>
+                            <option defaultValue>Usuario</option>
+                            {usuarioList.map(usuario => (
+                                <option key={usuario.codUsuario} value={usuario.codUsuario}>{usuario.loginUsuario}</option>
+                            ))}
+                        </select>
+                    </div>
+                    
+                    <div className="form__button-content">
+                        <button className="button form__button" onClick={handleSubmit}>Cadastrar</button>
+                    </div>
                 </form>
             </div>
         </div>

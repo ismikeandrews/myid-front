@@ -1,0 +1,82 @@
+.admin {
+    align-items: flex-start;
+    display: flex;
+    
+    &__menu {
+        background: $blue;
+        color: $white;
+        font: 20px $font-bold;
+        height: 100vh;
+        text-align: center;
+        width: 25%;
+    }
+    
+    &__container {
+        height: 90vh;
+        overflow-y: scroll;
+        padding: 20px 30px;
+        width: 75%;
+    }
+
+    &__item {
+        margin-bottom: 40px;
+        padding-bottom: 40px; 
+        position: relative;
+        
+        &:before {
+            background: #bababa;
+            content: '';
+            height: 1px;
+            bottom: 0;
+            position: absolute;
+            width: 100%;
+        }
+    }
+}
+
+.form {
+    &__label {
+        color: $blue;
+        font: 16px $font-medium;
+        margin-top: 10px;
+    }
+
+    &__input {
+        color: $blue;
+        background: transparent;
+        border: 2px solid $blue;
+        border-radius: 3px;
+        font: 15px $font-regular;
+        margin: 10px 0;
+        outline: none;
+        padding: 10px;
+        width: 280px;
+    }
+
+    &__select {
+        color: $blue;
+        background: transparent;
+        border: 2px solid $blue;
+        border-radius: 3px;
+        font: 15px $font-regular;
+        margin: 10px 0;
+        outline: none;
+        padding: 10px;
+        width: 305px;
+    }
+
+    &__button {
+        border: 2px solid $green;
+        border-radius: 5px;
+        color: $green;
+        font: 15px $font-bold;
+        margin: 20px 0 0;
+        padding: 5px 10px;
+        width: 130px;
+        
+        &:hover {
+            background: $green;
+            color: $white;
+        }
+    }
+}

@@ -17,14 +17,17 @@ export default function TipoConsultor(){
     };
 
     return (
-        <div>
-            <h3>Tipo Consultor Component</h3>
-            <hr/>
+        <div className="admin__item">
+            <h3 className="title">Tipo Consultor Component</h3>
+            
             <div>
-                <form>
-                    <input type="text" placeholder="Tipo consultor" value={nomeTipoConsultor} onChange={event => setNomeTipoConsultor(event.target.value)}/>
-                    <br/>
-                    <button onClick={handleSubmit}>Cadastrar</button>
+                <form className="form">
+                    <div className="form__label">Tipo consultor:</div>
+                    <input className="form__input" type="text" value={nomeTipoConsultor} onChange={event => setNomeTipoConsultor(event.target.value)}/>
+                    
+                    <div className="form__button-content">
+                        <button className="button form__button" onClick={handleSubmit}>Cadastrar</button>
+                    </div>
                 </form>
             </div>
         </div>

@@ -14,16 +14,26 @@ export default function Login(){
     }
 
     return(
-        <div>
-            <div>
-                <h1>Login Page</h1>
+        <div className="login">
+            <div className="login__effects-top">
             </div>
-            <div>
-                <input type="text" placeholder="Usuario" value={loginUsuario} onChange={event => setLoginUsuario(event.target.value)}/>
-                <br/>
-                <input type="password" placeholder="Senha" value={senhaUsuario} onChange={event => setSenhaUsuario(event.target.value)}/>
-                <br/>
-                <button onClick={() => handleLogin()}>Entrar</button>
+
+            <div className="login__content">
+                <div className="login__title">
+                    <h1>Login Page</h1>
+                </div>
+                <div className="login__form">
+                    <div className="login__label">Usuário:</div>
+                    <input className="login__input" type="text" placeholder="Usuario" value={loginUsuario} onChange={event => setLoginUsuario(event.target.value)}/>
+
+                    <div className="login__label">Senha:</div>
+                    <input className="login__input" type="password" placeholder="Senha" value={senhaUsuario} onChange={event => setSenhaUsuario(event.target.value)}/>
+
+                    <button className="button login__button" onClick={() => handleLogin()}>Entrar</button>
+                </div>
+            </div>
+
+            <div className="login__effects-bottom">
             </div>
         </div>
     );

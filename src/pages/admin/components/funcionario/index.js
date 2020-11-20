@@ -37,26 +37,34 @@ export default function Funcionario(){
     };
 
     return (
-        <div>
-            <h3>Funcionario Component</h3>
-            <hr/>
+        <div className="admin__item">
+            <h3 className="title">Funcionario Component</h3>
+            
             <div>
-                <form>
-                    <select value={codUsuario} onChange={event => setCodUsuario(event.target.value)}>
-                        <option defaultValue>Usuario</option>
-                        {usuarioList.map(usuario => (
-                            <option key={usuario.codUsuario} value={usuario.codUsuario}>{usuario.loginUsuario}</option>
-                        ))}
-                    </select>
-                    <br/>
-                    <select value={codOrgaoEmissor} onChange={event => setCodEmissor(event.target.value)}>
-                        <option defaultValue>Orgão Emissor</option>
-                        {orgaoEmissorList.map(orgaoEmissor => (
-                            <option key={orgaoEmissor.codOrgaoEmissor} value={orgaoEmissor.codOrgaoEmissor}>{orgaoEmissor.siglaOrgaoEmissor}</option>
-                        ))}
-                    </select>
-                    <br/>
-                    <button onClick={handleSubmit}>Cadastrar</button>
+                <form className="form">
+                    <div className="form__select-content">
+                        <div className="form__label">Usuário:</div>
+                        <select className="form__select" value={codUsuario} onChange={event => setCodUsuario(event.target.value)}>
+                            <option defaultValue>Usuário</option>
+                            {usuarioList.map(usuario => (
+                                <option key={usuario.codUsuario} value={usuario.codUsuario}>{usuario.loginUsuario}</option>
+                            ))}
+                        </select>
+                    </div>
+                    
+                    <div className="form__select-content">
+                        <div className="form__label">Órgão Emissor:</div>
+                        <select className="form__select" value={codOrgaoEmissor} onChange={event => setCodEmissor(event.target.value)}>
+                            <option defaultValue>Órgão Emissor</option>
+                            {orgaoEmissorList.map(orgaoEmissor => (
+                                <option key={orgaoEmissor.codOrgaoEmissor} value={orgaoEmissor.codOrgaoEmissor}>{orgaoEmissor.siglaOrgaoEmissor}</option>
+                            ))}
+                        </select>
+                    </div>
+
+                    <div className="form__button-content">    
+                        <button className="button form__button" onClick={handleSubmit}>Cadastrar</button>
+                    </div>
                 </form>
             </div>
         </div>
