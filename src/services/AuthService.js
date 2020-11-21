@@ -1,9 +1,15 @@
+import axios from 'axios';
+import url from '../config/enviroment'
+
 const AuthService = {
     
-    async storeAuthData(data){
+    async storeAuthData(dataObj){
         try {
-            const stringData = JSON.stringify(data); //alterar aqui*
+            const { data } = await axios.post(`${url.homolog}/login`, dataObj);
+            console.log(data)
+            const stringData = JSON.stringify(data);
             localStorage.setItem("authData", stringData);
+            return true;
         } catch (error) {
             console.log(error);
             alert("Ocorreu um erro :(");
@@ -16,7 +22,7 @@ const AuthService = {
     },
 
     logout(){
-        localStorage.removeItem("authData");
+        localStorage.clear();
     }
 
 };

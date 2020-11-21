@@ -7,11 +7,15 @@ export default function Login(){
 
     const [loginUsuario, setLoginUsuario] = useState('');
     const [senhaUsuario, setSenhaUsuario] = useState('');
-
+    const [redirectTo, setRedirectTo] = useState(null);
     const handleLogin = () => {
         const credentials = { loginUsuario, senhaUsuario }
-        AuthService.storeAuthData(credentials)
+        console.log(credentials)
+        const isLogged = AuthService.storeAuthData(credentials)
+        isLogged && setRedirectTo('/admin')
     }
+
+    redirectTo && <Redirect to={redirectTo}/>
 
     return(
         <div className="login">

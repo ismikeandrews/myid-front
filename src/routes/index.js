@@ -5,17 +5,24 @@ import { AuthService } from '../services';
 import { Welcome, Admin, Login } from '../pages';
 
 export default function Routes(){
+    const [isLogged, setIsLogged] = useState(false)
 
     useEffect(() => {
-        
-    }, [])
+        const data = AuthService.getAuthData()
+        data && setIsLogged(true)
+    }, []);
 
     return (
         <BrowserRouter>
             <Switch>
-                <Route path="/" exact component={Welcome}/>
-                <Route path="/admin" component={Admin}/>
-                <Route path="/Login" component={Login}/>
+                {isLogged ? 
+                    <Route path="/admin" component={Admin}/>
+                    :
+                    <>
+                        <Route path="/" exact component={Welcome}/>
+                        <Route path="/Login" component={Login}/>
+                    </>
+                }
             </Switch>
         </BrowserRouter>
     );
