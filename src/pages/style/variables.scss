@@ -37,3 +37,15 @@ $white: #EFEFEF;
 $black: #37474F;
 $blue: #055C92;
 $green: #059279;
+
+@mixin MQ($size) {
+    @media screen and (max-width: $size) {
+        @content;
+    }
+}
+
+$XS: 480px;
+$S: 758px;
+$M: 960px;
+$L: 1024px;
+$XL: 1130px;

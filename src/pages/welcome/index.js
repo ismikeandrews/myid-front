@@ -176,9 +176,9 @@ export default function Welcome(){
                         <input type='email' placeholder='Digite seu e-mail' className='news__input' />
                     </div>
                     <div className='news__item'>
-                        <div className='news__button'>
+                        <div className='button news__button'>
                             Enviar
-                        </div>                        
+                        </div>
                     </div>
                 </div>
             </div>
@@ -186,7 +186,7 @@ export default function Welcome(){
             <div className='wrapper download'>
                 <h1 className='download__title'>Disponível para download</h1>
                 
-                <div className='download__list'>
+                <div className='download__content'>
                     <div className='download__image'>
                         <img src={ telaInicio } alt="Tela inicial do MyId" title="Tela inicial do MyId" className="download__image-img" />
                     </div>

@@ -17,10 +17,18 @@
         align-items: flex-start;
         display: flex;
         justify-content: space-evenly;
+        
+        @include MQ($S) {
+            display: block;
+        }
     }
 
     &__item {
         width: 35%;
+        
+        @include MQ($S) {
+            width: 100%;
+        }
 
         &-title {
             color: $black;
@@ -31,6 +39,11 @@
             color: $black;
             font: 16px/24px $font-regular;
             margin: 20px 20px 50px;
+            
+            @include MQ($S) {
+                margin: 20px auto 50px;
+                max-width: 310px;
+            }
         }
 
         &-image {

@@ -2,11 +2,24 @@ body {
     background: $bg;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .wrapper {
     margin: auto;
     padding: 50px 250px;
+
+    @include MQ(1200px) {
+        padding: 50px 150px;
+    }
+
+    @include MQ($XL) {
+        padding: 50px 70px;
+    }
+
+    @include MQ($M) {
+        padding: 50px 30px;
+    }
 }
 
 .menu {
@@ -23,8 +36,12 @@ body {
         justify-content: center;
         margin-left: 130px;
         width: 100%;
+        
+        @include MQ($S) {
+            margin: 0;
+        }
     }
-    
+        
     &__item {
         color: $white;
         cursor: pointer;
@@ -33,9 +50,18 @@ body {
         text-decoration: none;
         text-transform: uppercase;
         transition: color .5s ease-in-out;
-
+        
         &:hover {
             color: $green;
+        }
+        
+        @include MQ(600px) {
+            font-size: 14px;
+            margin: 0 20px;
+        }
+        
+        @include MQ(600px) {
+            margin: 0 10px;
         }
     }
 }
@@ -50,6 +76,10 @@ body {
     align-items: center;
     display: flex;
     justify-content: flex-start;
+    
+    @include MQ($XS) {
+        display: block;
+    }
 }
 
 .button {
@@ -70,5 +100,13 @@ body {
     &:hover {
         background: $green;
         border-color: $green;
+    }
+    
+    @include MQ($S) {
+        font-size: 15px;
+    }
+    
+    @include MQ($XS) {
+        margin: 0 auto 20px;
     }
 }

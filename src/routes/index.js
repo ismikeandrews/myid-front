@@ -15,13 +15,12 @@ export default function Routes(){
     return (
         <BrowserRouter>
             <Switch>
+                <Route path="/" exact component={Welcome}/>
+                
                 {isLogged ? 
                     <Route path="/admin" component={Admin}/>
                     :
-                    <>
-                        <Route path="/" exact component={Welcome}/>
-                        <Route path="/Login" component={Login}/>
-                    </>
+                    <Route path="/Login" component={Login}/>
                 }
             </Switch>
         </BrowserRouter>

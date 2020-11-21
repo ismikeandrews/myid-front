@@ -5,12 +5,26 @@
     justify-content: space-between;
     padding: 120px 120px 0;
     
+    @include MQ($S) {
+        display: block;
+        padding: 120px 50px 0;
+    }
+    
     &__desc {
         width: 65%;
+        
+        @include MQ($S) {
+            padding-bottom: 50px;
+            width: 100%;
+        }
     }
     
     &__image {
         width: 35%;
+        
+        @include MQ($S) {
+            display: none;
+        }
     }
 
     &__title {
@@ -18,6 +32,10 @@
         font: 30px $font-semibold;
         margin: 0;
         text-transform: uppercase;
+        
+        @include MQ($S) {
+            font-size: 24px;
+        }
     }
     
     &__text {
@@ -25,10 +43,18 @@
         font: 20px/28px $font-regular;
         margin: 30px 0 50px;
         max-width: 500px;
+        
+        @include MQ($S) {
+            font-size: 18px;
+        }
     }
 
     &__img {
         margin-bottom: -5px;
         width: 400px;
+        
+        @include MQ($S) {
+            width: 250px;
+        }
     }
 }

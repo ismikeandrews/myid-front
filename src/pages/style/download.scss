@@ -7,9 +7,27 @@
         text-align: center;
     }
 
-    &__list {
+    &__content, &__list {
         align-items: center;
         display: flex;
+        
+    }
+
+    &__list {
+        @include MQ(650px) {
+            display: block;
+        }
+
+        @include MQ($XS) {
+            display: flex;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__content {
+        @include MQ($XS) {
+            flex-direction: column-reverse;
+        }
     }
     
     &__image {
@@ -18,22 +36,38 @@
         
         &-img {
             width: 200px;
+            
+            @include MQ($S) {
+                width: 130px;
+            }
         }
     }
     
     &__desc {
         width: 50%;
         
+        @include MQ($XS) {
+            width: 95%;
+        }
+        
         &-title {
             color: $black;
             font: 23px $font-bold;
             text-transform: uppercase;
+            
+            @include MQ($S) {
+                font-size: 20px;
+            }
         }
         
         &-text {
             color: $black;
             font: 16px/24px $font-medium;
             max-width: 500px;
+            
+            @include MQ($S) {
+                font-size: 14px;
+            }
         }
     }
     
@@ -44,5 +78,15 @@
     &__icon {
         height: 50px;
         margin: 50px 20px 0 0;
+        
+        @include MQ($S) {
+            height: 40px;
+            margin: 10px 20px 0 0;
+        }
+        
+        @include MQ(650px) {
+            height: 35px;
+            width: 110px;
+        }
     }
 }

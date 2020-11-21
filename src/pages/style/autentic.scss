@@ -4,8 +4,25 @@
     display: flex;
     justify-content: space-between;
     
+    @include MQ($M) {
+        justify-content: space-evenly;
+    }
+    
+    @include MQ($S) {
+        display: block;
+    }
+    
     &__item {
         width: 49%;
+        margin: auto;
+
+        @include MQ($S) {
+            width: 70%;
+        }
+        
+        @include MQ($XS) {
+            width: 95%;
+        }
 
         &--icon {
             text-align: center;
@@ -28,13 +45,17 @@
     &__text {
         color: $blue;
         font: 16px/24px $font-regular;
-
+        
         &--bold {
             font-family: $font-bold;
         }
     }
-
+    
     &__icon {
         width: 130px;
+        
+        @include MQ($S) {
+            width: 100px;
+        }
     }
 }

@@ -10,6 +10,10 @@
         background: $bg;
         display: flex;
         justify-content: center;
+        
+        @include MQ($S) {
+            display: block;
+        }
     }
     
     &__item {
@@ -26,24 +30,22 @@
         outline: none;
         padding: 10px 15px;
         width: 400px;
+
+        @include MQ(650px) {
+            width: 90%;
+        }
     }
     
     &__button {
-        border: 3px solid $green;
-        background: transparent;
-        border-radius: 10px;
+        border-color: $green;
         color: $green;
-        cursor: pointer;
-        font: 18px $font-bold;
-        padding: 10px;
-        text-align: center;
-        text-transform: uppercase;
-        transition: all .5s ease-in-out;
-        width: 200px;
         
         &:hover {
-            background: $green;
             color: $white;
+        }
+
+        @include MQ($S) {
+            margin: auto;
         }
     }
 }

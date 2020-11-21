@@ -4,13 +4,40 @@
     display: flex;
     justify-content: space-between;
     
+    @include MQ($M) {
+        justify-content: space-evenly;
+    }
+    
+    @include MQ($S) {
+        display: block;
+    }
+    
     &__item {
         width: 49%;
+        margin: auto;
+
+        &:first-child {
+            @include MQ($XS) {
+                text-align: center;
+            }
+        }
+
+        @include MQ($S) {
+            width: 70%;
+        }
+            
+        @include MQ($XS) {
+            width: 95%;
+        }
     }
 
     &__img {
         margin-top: 50px;
         width: 300px;
+        
+        @include MQ($S) {
+            width: 250px;
+        }
     }
     
     &__title {
